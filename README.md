@@ -6,10 +6,10 @@ In short, cartridges may never write to ~/.ssh, so connecting to GitHub or BitBu
 
 This cartridge provides an executable called `git-ssh` and the `GIT_SSH` environmental variable to point at that executable. 
 
-The script will cause all git operations to SSH command with the `StrictHostKeyChecking` option set to no.
+The script will cause all git operations to SSH command with the `UserKnownHostsFile` option set to a location that is writable, `${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts`.
 
 ## Keys and Credentials
 
-You can put an SSH key into `$OPENSHIFT_DATA_DIR/git-ssh/id_rsa` and the `git-ssh` binary will use it.
+You can put n SSH key into `$OPENSHIFT_DATA_DIR/git-ssh/id_rsa` and the `git-ssh` command will use it.
 
 Finally, for good measure, it will unlock ~/.netrc, in case your Jenkins builds need to store credentials there.

@@ -4,9 +4,9 @@ Cartridge-Short-Name: GITSSH
 Architecture: noarch
 Display-Name: Git SSH Helper
 Description: Utility
-Version: '0.0.1'
-Cartridge-Version: 0.0.1
-Cartridge-Vendor: phase2
+Version: '0.0.2'
+Cartridge-Version: 0.0.2
+Cartridge-Vendor: damaestro
 License: BSD
 Categories:
 - embedded
