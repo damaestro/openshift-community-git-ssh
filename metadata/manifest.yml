@@ -2,7 +2,7 @@
 Name: gitssh
 Cartridge-Short-Name: GITSSH
 Architecture: noarch
-Display-Name: Git SSH Helper
+Display-Name: GitHub SSH Helper
 Description: Utility
 Version: '0.0.2'
 Cartridge-Version: 0.0.2
