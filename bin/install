@@ -14,7 +14,7 @@ gitssh_public_key=$(cat ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa.pub)
 
 # Generate known_hosts from list of git_ssh_hosts
 ssh-keyscan -t rsa,dsa -f ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts > ${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts
-gitssh_hosts=$(for p in $(cat ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts); do echo "   *$p"; done)
+gitssh_hosts=$(for p in $(cat ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts); do echo "   * $p"; done)
 
 client_result ""
 client_result "  GIT_SSH configured successfully for:"
