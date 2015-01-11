@@ -7,12 +7,19 @@ esac
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
+# Generate keypair
 ssh-keygen -b 4096 -N '' -f ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa > /dev/null
 sed -i "s/@$HOSTNAME/@$OPENSHIFT_APP_DNS/g" ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa.pub
 gitssh_public_key=$(cat ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa.pub)
 
+# Generate known_hosts from list of git_ssh_hosts
+ssh-keyscan -t rsa,dsa -f ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts > ${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts
+gitssh_hosts=$(cat ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts)
+
 client_result ""
-client_result "  GIT_SSH configured successfully for GitHub."
+client_result "  GIT_SSH configured successfully for:"
+client_result "$gitssh_hosts"
+client_result ""
 client_result "  Please add the following public key to your repo(s):"
 client_result ""
 client_result "$gitssh_public_key"

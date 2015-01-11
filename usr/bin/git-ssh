@@ -3,7 +3,7 @@
 KEY="${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa"
 
 [ -f $KEY ] && {
-  ssh -o VerifyHostKeyDNS=yes -o UserKnownHostsFile=${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts -i $KEY $@
+  ssh -o UserKnownHostsFile=${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts -i $KEY $@
 } || {
-  ssh -o VerifyHostKeyDNS=yes -o UserKnownHostsFile=${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts $@
+  ssh -o UserKnownHostsFile=${OPENSHIFT_DATA_DIR}/git-ssh/known_hosts $@
 }

@@ -2,3 +2,9 @@
 
 touch $HOME/.netrc
 mkdir $OPENSHIFT_DATA_DIR/git-ssh
+
+cat <<GITHOSTS > ${OPENSHIFT_DATA_DIR}/git-ssh/git_ssh_hosts
+github.com
+bitbucket.org
+gitlab.com
+GITHOSTS
