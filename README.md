@@ -1,4 +1,4 @@
-# GIT_SSH for GitHub Using SSHFP Records
+# GIT_SSH for GitHub Using SSHFP
 
 A cartridge to make it easier to build from GitHub with the OpenShift Jenkins. **Bitbucket does not work with this menthod as they do not publish SSHFP records yet.**
 
