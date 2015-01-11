@@ -24,4 +24,4 @@ Finally, for good measure, this cartridge creates ~/.netrc, in case your Jenkins
 
 ## Supporting SSHFP
 
-Instead of having to pre-populate a known\_hosts file, you can also use SSHFP. See https://github.com/damaestro/openshift-community-git-ssh/tree/sshfp for SSHFP support and for information about how to request support for SSHFP from these providers. The listed providers currently do not fully support SSHFP.
+Instead of having to pre-populate a known\_hosts file, you can also use SSHFP. See [the sshfp branch](https://github.com/damaestro/openshift-community-git-ssh/tree/sshfp) for SSHFP support and for information about how to request support for SSHFP from these providers. The listed providers currently do not fully support SSHFP.
