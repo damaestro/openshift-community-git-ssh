@@ -2,7 +2,7 @@
 
 A cartridge to make it easier to build from git with the OpenShift Jenkins. **This method will only work if the git host you are connecting to has published SSHFP records and is using DNSSEC.**
 
-In short, cartridges may never write to ~/.ssh, so connecting to a git repo via ssh will fail with an error about the host key.
+In short, cartridges may never write to ~/.ssh, so connecting to a git repo via ssh will fail with an error about the host key. (Host key verification failed.)
 
 This cartridge provides an executable called `git-ssh` and the `GIT_SSH` environmental variable to point at that executable. 
 
