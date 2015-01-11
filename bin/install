@@ -8,7 +8,7 @@ esac
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 ssh-keygen -b 4096 -N '' -f ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa > /dev/null
-sed -i "s/@$HOSTNAME/@$OPENSHIFT_APP_DNS/g" ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa
+sed -i "s/@$HOSTNAME/@$OPENSHIFT_APP_DNS/g" ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa.pub
 gitssh_public_key=$(cat ${OPENSHIFT_DATA_DIR}/git-ssh/id_rsa.pub)
 
 client_result ""
